@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Timmana');
+
+  .back {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s; 
+    animation-iteration-count:infinite;
+  }
+  .back h1{
+    
+    text-align:center;
+    padding-top:70px;  
+    font-size:70px;
+   font-family: 'Timmana', sans-serif;
+   margin:0;
+   
+  }
+
+  .back h3{
+     text-align:center;
+     font-size: 60px;
+     margin: 0;
+     
+  }
+
+  .back p{
+      
+       text-align:center;
+       font-size: 25px;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    
+  }
+  .heart:after {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+
+
+
+
+@media screen and (max-width: 991px){
+  .back h1{
+         padding-top: 40px;
+         font-size: 60px;
+  }
+ .back h3{
+  font-size:40px;
+ }
+ .heart{
+  margin-top: 265px; 
+}
+
+}
+
+@media screen and (max-width: 575px){
+
+  .back h1{
+         padding-top: 50px;
+         font-size: 35px;
+  }
+ .back h3{
+  font-size:25px;
+ }
+.heart{
+  margin-top: 220px; 
+}
+
+}
